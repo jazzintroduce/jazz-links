@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenny Dorham - Jazz Contrasts</title>
+
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ベースリセット */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 背景：動画と同じネイビートーン */
+    body {
+      background-color: #0a0f2c;
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 32px 16px 48px;
+    }
+
+    /* カード：最大幅480px */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* アルバムアートワーク */
+    .artwork {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+      margin-bottom: 28px;
+    }
+
+    .artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* アーティスト名 */
+    .artist-name {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+
+    /* アルバム名 */
+    .album-name {
+      color: #b49650;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
+    }
+
+    /* サブスクリンクボタン群 */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* 各リンクボタン */
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s ease, transform 0.1s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .link-btn:active {
+      opacity: 0.75;
+      transform: scale(0.98);
+    }
+
+    /* YouTube Music: 赤 */
+    .btn-youtube {
+      background-color: #cc0000;
+      color: #ffffff;
+    }
+
+    /* Spotify: 緑 */
+    .btn-spotify {
+      background-color: #1db954;
+      color: #ffffff;
+    }
+
+    /* Apple Music: ピンク */
+    .btn-apple {
+      background-color: #fc3c44;
+      color: #ffffff;
+    }
+
+    /* Amazon Music: 水色 */
+    .btn-amazon {
+      background-color: #00a8e0;
+      color: #ffffff;
+    }
+
+    /* サービスアイコン（SVGインライン） */
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- アルバムアートワーク -->
+    <div class="artwork">
+      <img src="artwork.jpg" alt="Kenny Dorham - Jazz Contrasts">
+    </div>
+
+    <!-- アーティスト名 -->
+    <h1 class="artist-name">Kenny Dorham</h1>
+
+    <!-- アルバム名 -->
+    <p class="album-name">Jazz Contrasts</p>
+
+    <!-- サブスクリンクボタン -->
+    <div class="links">
+
+      <!-- YouTube Music（赤） -->
+      <a class="link-btn btn-youtube"
+         href="https://music.youtube.com/playlist?list=OLAK5uy_lGzOZkijf1YPVZ0PRXWk07O99dmEf1EYg"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+        YouTube Music で聴く
+      </a>
+
+      <!-- Spotify（緑） -->
+      <a class="link-btn btn-spotify"
+         href="https://open.spotify.com/album/3RQ0EncSROcGKALjL8HF8u"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 01-.277-1.215c3.809-.87 7.077-.496 9.712 1.115a.623.623 0 01.207.857zm1.223-2.722a.78.78 0 01-1.072.257c-2.687-1.652-6.785-2.13-9.965-1.165a.78.78 0 01-.972-.519.781.781 0 01.52-.972c3.632-1.102 8.147-.568 11.233 1.327a.78.78 0 01.256 1.072zm.105-2.835c-3.223-1.914-8.54-2.09-11.618-1.156a.935.935 0 11-.543-1.79c3.532-1.073 9.404-.865 13.115 1.338a.935.935 0 11-.954 1.608z"/>
+        </svg>
+        Spotify で聴く
+      </a>
+
+      <!-- Apple Music（ピンク） -->
+      <a class="link-btn btn-apple"
+         href="https://music.apple.com/us/album/jazz-contrasts/1442885179"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208A7.823 7.823 0 00.09 5.08c-.02.215-.03.43-.04.645v12.74a8.68 8.68 0 00.15 1.62c.164.892.5 1.718 1.076 2.432.743.92 1.693 1.52 2.82 1.83.52.14 1.052.215 1.597.234.245.01.49.02.737.022h12.745c.35-.007.7-.03 1.046-.07.68-.08 1.336-.255 1.938-.59 1.046-.59 1.74-1.46 2.12-2.59.2-.57.294-1.162.31-1.763.004-.138.007-.277.007-.415V6.52c0-.133-.003-.265-.007-.396zm-12.26 14.31H9.407V10.62H7.77v-2.32h1.638V6.932c0-1.723.987-2.74 2.707-2.74.77 0 1.573.14 1.573.14v1.724h-.886c-.873 0-1.144.542-1.144 1.098v1.146h1.947l-.31 2.32h-1.637v9.814z"/>
+        </svg>
+        Apple Music で聴く
+      </a>
+
+      <!-- Amazon Music（水色） -->
+      <a class="link-btn btn-amazon"
+         href="https://music.amazon.co.jp/albums/B00BK64CCA?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_TUkRcvOvs1gr3CGB3eZXb8oxz"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.872-1.234-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.89 5.942-1.098v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.134-.82-1.789-.82-1.215 0-2.298.625-2.563 1.919-.054.285-.261.567-.549.582l-3.064-.333c-.259-.056-.548-.266-.472-.66.705-3.716 4.06-4.838 7.066-4.838 1.537 0 3.547.41 4.758 1.574 1.537 1.437 1.39 3.352 1.39 5.438v4.923c0 1.48.616 2.13 1.192 2.929.203.283.248.623-.01.833-.647.54-1.794 1.537-2.428 2.099l-.01-.02zM21.949 19.928c-3.895 2.862-9.548 4.383-14.41 4.383-6.815 0-12.952-2.52-17.592-6.713-.365-.33-.038-.78.4-.524 5.01 2.914 11.2 4.664 17.595 4.664 4.314 0 9.057-.895 13.421-2.748.658-.28 1.21.433.586.938z"/>
+        </svg>
+        Amazon Music で聴く
+      </a>
+
+    </div><!-- /.links -->
+  </div><!-- /.card -->
+</body>
+</html>
