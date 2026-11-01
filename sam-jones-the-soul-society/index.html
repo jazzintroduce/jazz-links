@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam Jones - The Soul Society</title>
+
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ベースリセット */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 背景：動画と同じネイビートーン */
+    body {
+      background-color: #0a0f2c;
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 32px 16px 48px;
+    }
+
+    /* カード：最大幅480px */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* アルバムアートワーク */
+    .artwork {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+      margin-bottom: 28px;
+    }
+
+    .artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* アーティスト名 */
+    .artist-name {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+
+    /* アルバム名 */
+    .album-name {
+      color: #b49650;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+
+    /* 紹介コメント */
+    .comment {
+      color: #d2d2d2;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      margin-bottom: 36px;
+      padding: 0 4px;
+    }
+
+    /* サブスクリンクボタン群 */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* 各リンクボタン */
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .link-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .link-btn:active {
+      opacity: 0.75;
+      transform: scale(0.98);
+    }
+
+    /* YouTube Music: 赤 */
+    .btn-youtube {
+      background-color: #cc0000;
+      color: #ffffff;
+    }
+
+    /* Spotify: 緑 */
+    .btn-spotify {
+      background-color: #1db954;
+      color: #ffffff;
+    }
+
+    /* Apple Music: ピンク */
+    .btn-apple {
+      background-color: #fc3c44;
+      color: #ffffff;
+    }
+
+    /* Amazon Music: 水色 */
+    .btn-amazon {
+      background-color: #00a8e0;
+      color: #ffffff;
+    }
+
+    /* サービスアイコン（SVGインライン） */
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- アルバムアートワーク -->
+    <div class="artwork">
+      <img src="artwork.jpg" alt="Sam Jones - The Soul Society">
+    </div>
+
+    <!-- アーティスト名 -->
+    <h1 class="artist-name">Sam Jones</h1>
+
+    <!-- アルバム名 -->
+    <p class="album-name">The Soul Society</p>
+
+    <!-- 紹介コメント -->
+    <p class="comment">以前紹介したSomething In Commonに続くSam Jones特集第2弾。ハードバップ期の代表的なベーシストによる1960年リリースの初リーダー作。曲によってベースとチェロを持ち替えているのが特徴のアルバムです。管楽器も3本参加しており、豪勢なサウンドを楽しめます。以前紹介したBlue MitchellもTpで参加。4曲目の定番スタンダード『Just Friends』ではチェロでテーマを演奏しており、管楽器がオブリを加えているのがとても面白いです。</p>
+
+    <!-- サブスクリンクボタン -->
+    <div class="links">
+
+      <!-- YouTube Music（赤） -->
+      <a class="link-btn btn-youtube"
+         href="https://music.youtube.com/playlist?list=OLAK5uy_kfBTRHc0uryv0_KS4PxbzudyOfqSW-tVQ"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+        YouTube Music で聴く
+      </a>
+
+      <!-- Spotify（緑） -->
+      <a class="link-btn btn-spotify"
+         href="https://open.spotify.com/intl-ja/album/3eSpTqdz8XLY5bYr7BAGBL"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 01-.277-1.215c3.809-.87 7.077-.496 9.712 1.115a.623.623 0 01.207.857zm1.223-2.722a.78.78 0 01-1.072.257c-2.687-1.652-6.785-2.13-9.965-1.165a.78.78 0 01-.972-.519.781.781 0 01.52-.972c3.632-1.102 8.147-.568 11.233 1.327a.78.78 0 01.256 1.072zm.105-2.835c-3.223-1.914-8.54-2.09-11.618-1.156a.935.935 0 11-.543-1.79c3.532-1.073 9.404-.865 13.115 1.338a.935.935 0 11-.954 1.608z"/>
+        </svg>
+        Spotify で聴く
+      </a>
+
+      <!-- Apple Music（ピンク） -->
+      <a class="link-btn btn-apple"
+         href="https://music.apple.com/jp/album/the-soul-society/609354088"
+         target="_blank" rel="noopener noreferrer">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 5.2L21 2v13.6h-2V5.1l-8 2.1v10.6H9z"/>
+          <ellipse cx="7" cy="18" rx="3.1" ry="2.4" transform="rotate(-20 7 18)"/>
+          <ellipse cx="17" cy="15.8" rx="3.1" ry="2.4" transform="rotate(-20 17 15.8)"/>
+        </svg>
+        Apple Music で聴く
+      </a>
+
+
+    </div><!-- /.links -->
+  </div><!-- /.card -->
+</body>
+</html>
